@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Registration Form</title>
+    <style>
+        body {
+            background-color: #eef2f3;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 45%;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        h2 {
+            text-align: center;
+            color: #003366;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #777;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #003366;
+            color: white;
+            border: none;
+            margin-top: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #001a33;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Teacher Registration Form</h2>
+        <form method="POST" action="">
+            {% csrf_token %}
+
+            <label>Username:</label>
+            <input type="text" name="username" required>
+
+            <label>Password:</label>
+            <input type="password" name="password" required>
+
+            <label>Full Name:</label>
+            <input type="text" name="fullname" required>
+
+            <label>Email:</label>
+            <input type="email" name="email" required>
+
+            <label>Department:</label>
+            <input type="text" name="department" required>
+
+            <label>Qualification:</label>
+            <input type="text" name="qualification" required>
+
+            <label>Experience (Years):</label>
+            <input type="number" name="experience" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
